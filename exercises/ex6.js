@@ -13,5 +13,20 @@ Write a series of ternary statements that sets the variable category equal to:
 "undefined" if an animal doesn't eat plants or animals
 Use the eatsPlants and eatsAnimals variables to test your code.
 
-If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console. 
+If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console.
 */
+
+let category = '';
+let eatsPlants = true;
+let eatsAnimals = false;
+
+category =
+  eatsPlants && !eatsAnimals
+    ? 'herbivore'
+    : !eatsPlants && eatsAnimals
+    ? 'carnivore'
+    : eatsPlants && eatsAnimals
+    ? 'omnivore'
+    : 'undefined';
+
+console.log(category);

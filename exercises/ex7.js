@@ -18,6 +18,53 @@ Fill in the blanks with the type of education and the expected average salary. M
 
 In 2015, a person with a Bachelor's degree earned an average of $59,124/year.
 
-TIP: To print out the average salary with commas (i.e. 59,124), use the toLocaleString() method and pass it the locale "en-US". For example, salary.toLocaleString("en-US"). 
+TIP: To print out the average salary with commas (i.e. 59,124), use the toLocaleString() method and pass it the locale "en-US". For example, salary.toLocaleString("en-US").
 
 */
+
+// no high school diploma earned an average of $25,636/year,
+// a high school diploma earned an average of $35,256/year,
+// an Associate's degree earned an average of $41,496/year,
+// a Bachelor's degree earned an average of $59,124/year,
+// a Master's degree earned an average of $69,732/year,
+// a Professional degree earned an average of $89,960/year,
+// and a Doctoral degree earned an average of $84,396/year.
+
+let degree = '';
+let salary = 0;
+
+degree = `a Master's degree`;
+
+switch (degree) {
+  case 'no high school diploma':
+    salary = 35256;
+    break;
+  case 'a high school diploma':
+    salary = 35256;
+    break;
+  case `an Associate's degree`:
+    salary = 41496;
+    break;
+  case `a Bachelor's degree`:
+    salary = 59124;
+    break;
+  case `a Master's degree`:
+    salary = 69732;
+    break;
+  case 'a Professional degree':
+    salary = 89960;
+    break;
+  case 'a Doctoral degree':
+    salary = 84396;
+    break;
+  default:
+}
+
+if (salary != 0) {
+  salary = salary.toLocaleString('en-US');
+  console.log(
+    `In 2015, a person with ${degree} earned an average of $${salary}/year.`
+  );
+} else {
+  console.log('You have typos');
+}
