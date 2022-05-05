@@ -57,7 +57,6 @@ switch (degree) {
   case 'a Doctoral degree':
     salary = 84396;
     break;
-  default:
 }
 
 if (salary != 0) {
